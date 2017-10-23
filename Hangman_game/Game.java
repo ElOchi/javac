@@ -1,0 +1,20 @@
+class Game{
+  private String answer;
+  private String hits;
+  private String misses;
+
+  public Game(String answer){
+  /*private */  this.answer = answer; /* <--argument*/
+    hits = "";
+    misses = "";
+  }
+  public boolean applyGuess(char letter){
+    boolean isHit = answer.indexOf(letter) != -1;
+    if (isHit) {
+      hits += letter;
+    }else{
+      misses += letter;
+    }
+      return isHit;
+  }
+}
